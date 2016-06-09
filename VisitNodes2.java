@@ -19,12 +19,12 @@ public class VisitNodes2 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		for (int i = 0; i < usedEdges.length - 1; i++) {
+		for (int i = 0; i < usedEdges.length; i++) {
 			Arrays.fill(usedEdges[i], false);
 		}
 
 		int v = 0;
-		System.out.println("stating at node" + v+ "\n");
+		System.out.println("stating at node" + v);
 		deepFirstSearch(v);
 
 		boolean checkArrays = true;
@@ -51,7 +51,7 @@ public class VisitNodes2 {
 			if (graph[v][i]) {
 				if (!usedEdges[v][i]) {
 					usedEdges[v][i] = true;
-					System.out.println("marking edge (" + v + ", " + i +")");
+					System.out.println("  marking edge (" + v + ", " + i +")");
 					System.out.println("visting node " + i);
 					deepFirstSearch(i);
 				}
